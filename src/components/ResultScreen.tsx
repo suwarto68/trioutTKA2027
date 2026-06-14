@@ -17,7 +17,10 @@ import {
   BarChart3, 
   HelpCircle,
   Clock,
-  ArrowRight
+  ArrowRight,
+  ZoomIn,
+  ZoomOut,
+  Image
 } from 'lucide-react';
 import { Student, Question, ExamResult } from '../types';
 import { QuestionSvg } from './QuestionSvg';
@@ -32,6 +35,49 @@ interface ResultScreenProps {
   onFinished: () => void;
   onSubmitToSpreadsheet: (res: ExamResult) => Promise<boolean>;
 }
+
+const BASE_SVG_WIDTHS: Record<string, number> = {
+  'kulkas': 150,
+  'martabak': 150,
+  'diskon': 140,
+  'peta': 280,
+  'bakteri': 150,
+  'sel-mikroskop': 150,
+  'mercusuar': 160,
+  'jembatan-maket': 200,
+  'roti-gandum': 150,
+  'diskon-ganda': 180,
+  'paket-atk': 150,
+  'taman-bunga': 180,
+  'truk-cargo': 170,
+  'lift-barang': 150,
+  'pelajaran-pilihan': 180,
+  'taksi': 260,
+  'grafik-kursi': 280,
+  'korek': 240,
+  'kedai-mie': 150,
+  'peternakan-kambing-ayam': 150,
+  'lapangan-futsal': 180,
+  'botol-handsanitizer': 150,
+  'sudut-jembatan': 240,
+  'taman-segitiga': 160,
+  'ubin-aula': 150,
+  'bayangan-pohon': 200,
+  'jendela-trapesium': 170,
+  'tiang-antena': 150,
+  'sepeda-gunung': 150,
+  'bak-mandi': 160,
+  'prisma-gazebo': 155,
+  'bangun-3d': 150,
+  'pelayaran-kapal': 170,
+  'pigura-foto': 140,
+  'tim-basket': 160,
+  'nilai-matematika': 190,
+  'diagram-hobi': 140,
+  'kelereng-wadah': 140,
+  'persentase-ekskul': 140,
+  'grafik-panen': 280,
+};
 
 export const ResultScreen: React.FC<ResultScreenProps> = ({
   student,
@@ -48,6 +94,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
   const [isAdminUnlocked, setIsAdminUnlocked] = useState<boolean>(false);
   const [passwordInput, setPasswordInput] = useState<string>('');
   const [passwordError, setPasswordError] = useState<string>('');
+  const [reviewZoom, setReviewZoom] = useState<number>(100);
 
   const handleUnlockReview = (e: React.FormEvent) => {
     e.preventDefault();
@@ -569,8 +616,52 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                       )}
 
                       {activeQuestion.stimulusSvgType && (
-                        <div className="my-2 flex justify-center">
-                          <QuestionSvg type={activeQuestion.stimulusSvgType} />
+                        <div className="my-3 border border-slate-200/60 rounded-xl p-3 bg-slate-50/50">
+                          <div className="flex items-center justify-between mb-2 text-slate-500">
+                            <span className="text-[10px] font-black uppercase tracking-wider flex items-center gap-1 font-sans">
+                              <Image className="h-3 w-3 text-emerald-600" /> Ilustrasi Gambar
+                            </span>
+                            <div className="flex items-center gap-1 bg-white border border-slate-200 rounded-lg p-1 shadow-2xs">
+                              <button
+                                type="button"
+                                onClick={() => setReviewZoom(prev => Math.max(50, prev - 25))}
+                                className="p-0.5 hover:bg-slate-100 rounded-md text-slate-500 hover:text-slate-800 transition-colors cursor-pointer"
+                                title="Perkecil Gambar"
+                              >
+                                <ZoomOut className="h-3 w-3" />
+                              </button>
+                              <span className="text-[9px] font-extrabold font-mono px-1 min-w-[30px] text-center text-slate-600">
+                                {reviewZoom}%
+                              </span>
+                              <button
+                                type="button"
+                                onClick={() => setReviewZoom(prev => Math.min(250, prev + 25))}
+                                className="p-0.5 hover:bg-slate-100 rounded-md text-slate-500 hover:text-slate-800 transition-colors cursor-pointer"
+                                title="Perbesar Gambar"
+                              >
+                                <ZoomIn className="h-3 w-3" />
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => setReviewZoom(100)}
+                                className="px-1.5 py-0.5 hover:bg-slate-100 rounded-md text-slate-500 hover:text-slate-800 transition-colors text-[8px] font-bold uppercase cursor-pointer"
+                                title="Reset Ukuran"
+                              >
+                                Reset
+                              </button>
+                            </div>
+                          </div>
+                          <div className="flex justify-center items-center overflow-auto p-1" style={{ width: '100%' }}>
+                            <div 
+                              className="transition-all duration-150 ease-out" 
+                              style={{ 
+                                width: '100%', 
+                                maxWidth: `${(BASE_SVG_WIDTHS[activeQuestion.stimulusSvgType] || 180) * (reviewZoom / 100)}px` 
+                              }}
+                            >
+                              <QuestionSvg type={activeQuestion.stimulusSvgType} />
+                            </div>
+                          </div>
                         </div>
                       )}
                     </div>

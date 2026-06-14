@@ -320,7 +320,7 @@ const RAW_QUESTIONS_DB: Question[] = [
     category: 'Aljabar',
     materi: 'Pola Bilangan Geometri',
     stimulusTitle: 'Pola Korek Api Segitiga',
-    stimulusContent: 'Siswa SMP melakukan eksperimen mencocokkan pola batang korek api yang disusun membentuk deretan segitiga sama sisi:\n- Pola 1 (1 segitiga): membutuhkan **3 batang** korek api.\n- Pola 2 (2 segitiga sejajar berhimpit): membutuhkan **5 batang** korek api.\n- Pola 3 (3 segitiga): membutuhkan **7 batang** korek api.\n\nPola ini membentuk pertumbuhan korek api linear dengan rumus suku ke-n: **Un = 2n + 1**.',
+    stimulusContent: 'Siswa SMP melakukan eksperimen mencocokkan pola batang korek api yang disusun membentuk deretan segitiga sama sisi:\n- Pola 1 (1 segitiga): membutuhkan **3 batang** korek api.\n- Pola 2 (2 segitiga sejajar berhimpit): membutuhkan **5 batang** korek api.\n- Pola 3 (3 segitiga): membutuhkan **7 batang** korek api.\n\nSimak pertumbuhan barisan batang korek api di atas untuk menemukan pola matematika suku ke-n.',
     stimulusSvgType: 'korek',
     questionText: 'Manakah kesimpulan di bawah ini yang BENAR berkaitan dengan jumlah korek api pada pola berikutnya? (Jawaban boleh lebih dari satu!)',
     options: [

@@ -102,7 +102,7 @@ export const QuestionSvg: React.FC<QuestionSvgProps> = ({ type }) => {
           <path d="M 105 45 Q 110 38, 115 45 Z" fill="#475569" />
           <path d="M 110 50 L 15 20 L 15 50 Z" fill="#ef4444" opacity="0.3" />
           <path d="M 110 50 L 205 30 L 205 70 Z" fill="#22c55e" opacity="0.3" />
-          <text x="110" y="165" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#ffffff">Mercusuar: KPK (8s, 12s, 15s)</text>
+          <text x="110" y="165" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#ffffff">Sirine Lampu Mercusuar</text>
         </svg>
       );
 
@@ -115,7 +115,7 @@ export const QuestionSvg: React.FC<QuestionSvgProps> = ({ type }) => {
           <text x="120" y="55" fontSize="14" fill="#6366f1">➔</text>
           <rect x="135" y="25" width="90" height="50" rx="4" fill="#10b981" opacity="0.1" stroke="#10b981" />
           <text x="180" y="45" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#047857">Sebenarnya</text>
-          <text x="180" y="62" textAnchor="middle" fontSize="8" fill="#64748b">320 m | 18 m</text>
+          <text x="180" y="62" textAnchor="middle" fontSize="8.5" fontWeight="bold" fill="#047857">Panjang & Lebar?</text>
         </svg>
       );
 
@@ -138,7 +138,7 @@ export const QuestionSvg: React.FC<QuestionSvgProps> = ({ type }) => {
           <rect x="10" y="10" width="200" height="100" rx="8" fill="#ef4444" stroke="#b91c1c" strokeWidth="2" />
           <text x="110" y="45" textAnchor="middle" fill="#ffffff" fontWeight="bold" fontSize="15">DOUBLE DISKON</text>
           <text x="110" y="75" textAnchor="middle" fill="#facc15" fontWeight="black" fontSize="22">40% + 20%</text>
-          <text x="110" y="95" textAnchor="middle" fill="#ffffff" fontSize="9">Potongan Efektif: 52%</text>
+          <text x="110" y="95" textAnchor="middle" fill="#ffffff" fontSize="9" fontWeight="semibold">Double Diskon Toko</text>
         </svg>
       );
 
@@ -149,7 +149,7 @@ export const QuestionSvg: React.FC<QuestionSvgProps> = ({ type }) => {
           <text x="57" y="62" textAnchor="middle" fill="#ffffff" fontWeight="bold" fontSize="10">5x Buku</text>
           <rect x="110" y="30" width="40" height="50" rx="3" fill="#facc15" opacity="0.8" />
           <text x="130" y="60" textAnchor="middle" fill="#334155" fontWeight="bold" fontSize="10">3y Pensil</text>
-          <text x="100" y="112" textAnchor="middle" fontSize="11" fontWeight="bold" fill="#1e293b">Sisa: 100rb - 5x - 3y</text>
+          <text x="100" y="112" textAnchor="middle" fontSize="11" fontWeight="bold" fill="#1e293b">Uang Kembalian ?</text>
         </svg>
       );
 
@@ -159,7 +159,7 @@ export const QuestionSvg: React.FC<QuestionSvgProps> = ({ type }) => {
           <rect x="35" y="30" width="150" height="80" fill="#a7f3d0" stroke="#059669" strokeWidth="2" />
           <text x="110" y="24" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#047857">Panjang = (2x + 5) m</text>
           <text x="16" y="75" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#047857" transform="rotate(-90, 16, 75)">Lebar = (x - 2) m</text>
-          <text x="110" y="75" textAnchor="middle" fontSize="11" fontWeight="bold" fill="#065f46">Luas = 2x² + x - 10</text>
+          <text x="110" y="75" textAnchor="middle" fontSize="11" fontWeight="bold" fill="#065f46">Luas Tanah = ? m²</text>
         </svg>
       );
 
@@ -251,7 +251,7 @@ export const QuestionSvg: React.FC<QuestionSvgProps> = ({ type }) => {
           <circle cx="175" cy="125" r="3" fill="#94a3b8" />
           <circle cx="175" cy="138" r="3" fill="#94a3b8" />
           <circle cx="175" cy="151" r="3" fill="#94a3b8" />
-          <text x="175" y="170" textAnchor="middle" fontSize="10" fill="#2563eb" fontWeight="bold">Barisan Aritmatika b = 3</text>
+          <text x="175" y="170" textAnchor="middle" fontSize="10" fill="#64748b" fontWeight="bold">Pola Susunan Kursi</text>
         </svg>
       );
 
@@ -267,7 +267,7 @@ export const QuestionSvg: React.FC<QuestionSvgProps> = ({ type }) => {
           <circle cx="120" cy="45" r="5" fill="#ef4444" />
           <text x="60" y="118" textAnchor="middle" fontSize="9" fontWeight="bold" fill="#78350f">Pola 1 (3 batang)</text>
           <text x="120" y="118" textAnchor="middle" fontSize="9" fontWeight="bold" fill="#78350f">Pola 2 (5 batang)</text>
-          <text x="240" y="70" textAnchor="middle" fontSize="12" fontWeight="black" fill="#2563eb">Un = 2n + 1</text>
+          <text x="240" y="70" textAnchor="middle" fontSize="11" fontWeight="bold" fill="#64748b">Pola Ke-n = ?</text>
         </svg>
       );
 
@@ -301,7 +301,7 @@ export const QuestionSvg: React.FC<QuestionSvgProps> = ({ type }) => {
           <line x1="110" y1="15" x2="110" y2="125" stroke="#ffffff" />
           <circle cx="110" cy="70" r="22" fill="none" stroke="#ffffff" />
           <text x="110" y="65" textAnchor="middle" fontSize="10.5" fontWeight="bold" fill="#ffffff">Tarif Lapangan</text>
-          <text x="110" y="82" textAnchor="middle" fontSize="9" fontWeight="bold" fill="#facc15">F(t) = 80.000t + 50.000</text>
+          <text x="110" y="82" textAnchor="middle" fontSize="9.5" fontWeight="bold" fill="#ffffff">Tarif Sewa Lapangan ?</text>
         </svg>
       );
 

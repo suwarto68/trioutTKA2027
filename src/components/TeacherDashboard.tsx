@@ -64,6 +64,14 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
   const [isRandO, setIsRandO] = useState(settings.isRandomOption);
   const [settingsSuccess, setSettingsSuccess] = useState(false);
 
+  useEffect(() => {
+    setScriptUrl(settings.googleAppsScriptUrl);
+    setDuration(settings.examDurationMinutes);
+    setMaxViolations(settings.maxViolationsAllowed);
+    setIsRandQ(settings.isRandomQuestion);
+    setIsRandO(settings.isRandomOption);
+  }, [settings]);
+
   // Default login pin is 'guru2026'
   const handlePinSubmit = (e: React.FormEvent) => {
     e.preventDefault();
