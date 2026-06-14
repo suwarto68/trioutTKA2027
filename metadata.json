@@ -1,0 +1,6 @@
+{
+  "name": "Try Out TKA Numerasi SMP 2026",
+  "description": "Simulasi Try Out TKA Numerasi SMP 2026 Kelas IX berbasis komputer dengan integrasi Google Spreadsheet dan dashboard administrasi guru.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
